@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YTd-Do-k0h">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EC4-o4-l6R">
+                                <rect key="frame" x="50" y="540" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1B0-55-e1e"/>
+                                </constraints>
+                                <state key="normal" title="添加联系人"/>
+                                <connections>
+                                    <action selector="addPerson:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YKW-lV-jZt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F38-OM-BuW">
+                                <rect key="frame" x="263" y="540" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GjK-aA-0YC"/>
+                                </constraints>
+                                <state key="normal" title="删除联系人"/>
+                                <connections>
+                                    <action selector="removePerson:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0X-Ya-51e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8L-dc-c7N">
+                                <rect key="frame" x="475" y="540" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="f96-T4-Ega"/>
+                                </constraints>
+                                <state key="normal" title="修改联系人"/>
+                                <connections>
+                                    <action selector="changePerson:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fcD-Iv-Xjm"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p4B-la-clu">
+                                <rect key="frame" x="20" y="20" width="560" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I8L-dc-c7N" firstAttribute="centerY" secondItem="EC4-o4-l6R" secondAttribute="centerY" id="0vE-rl-Pyd"/>
+                            <constraint firstItem="p4B-la-clu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Qo-xn-r9z"/>
+                            <constraint firstItem="I8L-dc-c7N" firstAttribute="top" secondItem="p4B-la-clu" secondAttribute="bottom" constant="20" id="57Y-mq-sed"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EC4-o4-l6R" secondAttribute="bottom" constant="30" id="7iE-KV-S3f"/>
+                            <constraint firstItem="EC4-o4-l6R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="975-6L-AXm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I8L-dc-c7N" secondAttribute="trailing" constant="30" id="HUH-vL-yqu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="I8L-dc-c7N" secondAttribute="bottom" constant="30" id="Pg1-jc-2aO"/>
+                            <constraint firstItem="p4B-la-clu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SNJ-7U-g77"/>
+                            <constraint firstItem="p4B-la-clu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VOl-2G-ZT9"/>
+                            <constraint firstItem="F38-OM-BuW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dfL-6u-ekW"/>
+                            <constraint firstItem="F38-OM-BuW" firstAttribute="centerY" secondItem="EC4-o4-l6R" secondAttribute="centerY" id="n3R-r4-djP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F38-OM-BuW" secondAttribute="bottom" constant="30" id="po7-Af-duJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="p4B-la-clu" id="3uu-eE-mym"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="357"/>
+        </scene>
+        <!--Address BookUI View Controller-->
+        <scene sceneID="Npi-Fc-h7o">
+            <objects>
+                <viewController id="S5x-JE-6Rm" customClass="addressBookUIViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GQO-9R-JCt"/>
+                        <viewControllerLayoutGuide type="bottom" id="DD8-64-0nh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5P2-jW-UCp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niK-hq-cqR">
+                                <rect key="frame" x="263" y="360" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sRS-1n-FDz"/>
+                                </constraints>
+                                <state key="normal" title="添加联系人"/>
+                                <connections>
+                                    <action selector="addPersonClick:" destination="S5x-JE-6Rm" eventType="touchUpInside" id="6O0-gW-MA8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiu-H2-k70">
+                                <rect key="frame" x="263" y="420" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LXz-Ie-Kku"/>
+                                </constraints>
+                                <state key="normal" title="未知联系人"/>
+                                <connections>
+                                    <action selector="unknownPersonClick:" destination="S5x-JE-6Rm" eventType="touchUpInside" id="uQr-DU-PXu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1z-Db-rbZ">
+                                <rect key="frame" x="263" y="480" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="s1M-IP-hww"/>
+                                </constraints>
+                                <state key="normal" title="显示联系人"/>
+                                <connections>
+                                    <action selector="showPersonClick:" destination="S5x-JE-6Rm" eventType="touchUpInside" id="pas-JF-wgb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpt-JD-Nw3">
+                                <rect key="frame" x="263" y="540" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3oW-wb-VNa"/>
+                                </constraints>
+                                <state key="normal" title="选择联系人"/>
+                                <connections>
+                                    <action selector="selectPersonClick:" destination="S5x-JE-6Rm" eventType="touchUpInside" id="pEG-4F-uw9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fpt-JD-Nw3" firstAttribute="top" secondItem="Y1z-Db-rbZ" secondAttribute="bottom" constant="30" id="2eP-sK-GvR"/>
+                            <constraint firstItem="Y1z-Db-rbZ" firstAttribute="top" secondItem="qiu-H2-k70" secondAttribute="bottom" constant="30" id="8yU-i9-aPI"/>
+                            <constraint firstItem="qiu-H2-k70" firstAttribute="centerX" secondItem="5P2-jW-UCp" secondAttribute="centerX" id="9BM-bf-IQl"/>
+                            <constraint firstItem="qiu-H2-k70" firstAttribute="top" secondItem="niK-hq-cqR" secondAttribute="bottom" constant="30" id="H35-ry-Tkv"/>
+                            <constraint firstItem="Y1z-Db-rbZ" firstAttribute="top" secondItem="qiu-H2-k70" secondAttribute="bottom" constant="30" id="IzY-vM-uWT"/>
+                            <constraint firstItem="qiu-H2-k70" firstAttribute="top" secondItem="niK-hq-cqR" secondAttribute="bottom" constant="30" id="NPz-1b-5WV"/>
+                            <constraint firstItem="niK-hq-cqR" firstAttribute="centerX" secondItem="5P2-jW-UCp" secondAttribute="centerX" id="R2z-pU-gde"/>
+                            <constraint firstItem="Fpt-JD-Nw3" firstAttribute="centerX" secondItem="5P2-jW-UCp" secondAttribute="centerX" id="YDt-MQ-cNw"/>
+                            <constraint firstItem="DD8-64-0nh" firstAttribute="top" secondItem="Fpt-JD-Nw3" secondAttribute="bottom" constant="30" id="oY7-NP-MPN"/>
+                            <constraint firstItem="Y1z-Db-rbZ" firstAttribute="centerX" secondItem="5P2-jW-UCp" secondAttribute="centerX" id="tcP-6D-aMA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gDt-Aw-Ie1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KuN-9G-bHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="1049"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fbt-Du-DPD">
+            <objects>
+                <navigationController id="YTd-Do-k0h" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PsR-nv-P1a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="S5x-JE-6Rm" kind="relationship" relationship="rootViewController" id="thL-0E-SDt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xiI-oa-ULv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="1049"/>
+        </scene>
+    </scenes>
+</document>
